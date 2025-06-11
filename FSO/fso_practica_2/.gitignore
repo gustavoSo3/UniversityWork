@@ -1,0 +1,6 @@
+init
+getty
+sh
+
+.DS_Store
+
