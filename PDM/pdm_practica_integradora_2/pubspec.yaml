@@ -1,0 +1,29 @@
+name: practica_2
+description: My practica integradora 2 para mi clase de progamacion de dispositivos moviles.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  avatar_glow: ^2.0.2
+  bootstrap_icons: ^1.7.2
+  flutter_shimmer: ^2.1.2
+  flutter_bloc: ^8.0.1
+  firebase_core: ^1.15.0
+  firebase_auth: ^3.3.15
+  google_sign_in: ^5.3.0
+  cloud_firestore: ^3.1.13
+  url_launcher: ^6.1.0
+  record: ^3.0.4
+  path_provider: ^2.0.9
+  http: ^0.13.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
