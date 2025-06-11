@@ -6,4 +6,5 @@ This repo contains old university projects in a more organized manner
 
 - PAE - Programacion de aplicaciones de escritorio
 - PDM - Programacion de dispositivos moviles
+- FSO - Fundamentos de systemas operativos
 -
