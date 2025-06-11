@@ -12,3 +12,4 @@ This repo contains old university projects in a more organized manner
 - ML - Machine learning
 - DSS - Desarrollo de software seguro
 - DS - Diseño de software
+- CC - Cloud computing
