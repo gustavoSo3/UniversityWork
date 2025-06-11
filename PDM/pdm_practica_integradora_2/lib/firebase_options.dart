@@ -39,21 +39,5 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsVhQHDj5Tcz_gSsdGa9aNi6fE9Nf2kcQ',
-    appId: '1:1048757970593:android:11e765b647d8dfb68bf2e0',
-    messagingSenderId: '1048757970593',
-    projectId: 'practica2-9180b',
-    storageBucket: 'practica2-9180b.appspot.com',
-  );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCCT1lgsNCYBFsGYne1_FY_9tG0rKqEB9w',
-    appId: '1:1048757970593:ios:c4f7b066c040c84c8bf2e0',
-    messagingSenderId: '1048757970593',
-    projectId: 'practica2-9180b',
-    storageBucket: 'practica2-9180b.appspot.com',
-    iosClientId: '1048757970593-pn8k4vj1ab0defo1tm95p2013ukf4k5p.apps.googleusercontent.com',
-    iosBundleId: 'com.practica2.gustavosotres',
-  );
 }
