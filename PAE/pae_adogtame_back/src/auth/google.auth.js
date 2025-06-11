@@ -19,9 +19,6 @@ passport.deserializeUser((token, done) => {
 })
 
 passport.use(new GoogleStrategy({
-	callbackURL: '/api/auth/google/redirect',
-	clientID: '591419004148-gp4ig1p3bemvv29ec1e0ltjmo76iugke.apps.googleusercontent.com',
-	clientSecret: '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'
 }, async (accessToken, refreshToken, profile, done) => {
 	const user = await Users.findOne({ email: profile.emails[0].value });
 	if (user) {

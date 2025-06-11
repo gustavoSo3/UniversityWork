@@ -38,7 +38,6 @@ class MongoDB(Database):
 
     def abrir(self) -> None:
         self.client = MongoClient(
-            "mongodb+srv://admin:root@cluster0.muthfez.mongodb.net/?retryWrites=true&w=majority"
         )
         self.db = self.client["Solid"]
         self.collection = self.db["Productos"]
