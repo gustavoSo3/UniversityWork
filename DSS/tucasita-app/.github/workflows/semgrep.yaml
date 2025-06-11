@@ -1,0 +1,26 @@
+
+name: Semgrep
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  semgrep:
+    
+    name: semgrep/ci 
+  
+    runs-on: ubuntu-latest
+
+    container:
+      
+      image: returntocorp/semgrep
+
+    steps:
+      
+      - uses: actions/checkout@v3
+      
+      - run: semgrep scan --config=auto --no-git-ignore
+
+  #

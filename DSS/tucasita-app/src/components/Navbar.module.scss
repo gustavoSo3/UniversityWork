@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #f5f5f5;  // Light gray background for the navbar
+  
+    button {
+      padding: 0.5rem 1rem;  // Padding around the buttons
+      font-size: 1rem;      // Font size for button text
+      border: none;         // Remove default borders
+      cursor: pointer;      // Hand cursor for buttons
+      transition: background-color 0.3s;  // Transition effect for button hover
+  
+      &:hover {
+        background-color: #e0e0e0;  // Slightly darker gray when button is hovered
+      }
+    }
+  
+    .button {
+      margin-right: 1rem;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  

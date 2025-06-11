@@ -1,0 +1,30 @@
+name: Escaneo de Vulnerabilidades con OWASP ZAP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código fuente
+      uses: actions/checkout@v2
+
+    - name: Instalación de OWASP ZAP
+      run: |
+        sudo apt-get install -y openjdk-11-jdk
+        wget https://github.com/zaproxy/zaproxy/releases/download/v2.11.0/ZAP_2.11.0_Linux.tar.gz
+        tar -xvf ZAP_2.11.0_Linux.tar.gz
+        cd ZAP_2.11.0
+        ./zap.sh -daemon
+#
+    - name: Ejecución del escaneo de vulnerabilidades
+      run: |
+        ./ZAP_2.11.0/zap-cli --zap-path ./ZAP_2.11.0/zap.sh quick-scan --self-contained --spider --ajax spider --output-format json --output zap_report.json http://54.165.8.13:3000 
+#Se intentara con la ip dada ya que la ip cambia, esto es con fin de mostrar nuestra logica para la ejecucion de la tarea.
+    - name: Imprimir resultado en pantalla
+      run: |
+        cat zap_report.json

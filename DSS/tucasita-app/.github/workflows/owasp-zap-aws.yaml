@@ -1,0 +1,24 @@
+name: Run OWASP ZAP Scan
+
+on:
+  workflow_run:
+    workflows: ["Deploy to Amazon ECS"]  # This should be the name of your deployment workflow
+    types:
+      - completed
+
+jobs:
+  zap_scan:
+    name: OWASP ZAP Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run OWASP ZAP Scan
+        run: |
+          INSTANCE_URL="${{ github.event.workflow_run.outputs.instance_url }}"
+          echo "Instance URL: $INSTANCE_URL"
+          docker run -t owasp/zap2docker-stable zap-baseline.py -t $INSTANCE_URL
+
+
